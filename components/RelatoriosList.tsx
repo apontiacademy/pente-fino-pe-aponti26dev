@@ -96,7 +96,13 @@ export function RelatoriosList({ relatorios }: { relatorios: Relatorio[] }) {
                     {r.semana}
                   </Badge>
                   <span className="text-xs text-muted-foreground">
-                    {new Date(r.created_at).toLocaleDateString('pt-BR')}
+                    {new Date(r.created_at).toLocaleString('pt-BR', {
+                      day: '2-digit',
+                      month: '2-digit',
+                      year: 'numeric',
+                      hour: '2-digit',
+                      minute: '2-digit',
+                    })}
                   </span>
                 </div>
               </div>
