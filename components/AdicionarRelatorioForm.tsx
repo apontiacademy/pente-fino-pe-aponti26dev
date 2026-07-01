@@ -32,7 +32,7 @@ export function AdicionarRelatorioForm() {
       setGerarError(null)
       setShowGerarDialog(true)
     }
-  }, [state?.success])
+  }, [state])
 
   function handleGerarAuditoria() {
     if (!state?.relatorioId) return
