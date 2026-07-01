@@ -69,8 +69,5 @@ export async function deletarRelatorio(relatorioId: string) {
 
   if (error) throw new Error(`Erro ao deletar: ${error.message}`)
 
-  await gerarAuditoria('delete', relatorioId, supabase)
-
   revalidatePath('/relatorios')
-  revalidatePath('/auditorias')
 }
